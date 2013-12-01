@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include "utility.h"
 
 typedef struct{
 	int value;
@@ -18,9 +19,6 @@ typedef struct{
 	item *list;
 	int sizeObj; //Size of this object
 } vector;
-
-/* Função que aloca n posições de nBytes bytes e retorna um ponteiro de void. */
-void* alloc(int n, size_t nBytes);
 
 /* Método que inicializa a estrutura vector e já preenche as posições com o defaultValue. */
 void InitVector(vector *obj, int size, int defaultValue);
@@ -50,7 +48,7 @@ int Empty(vector *obj);
 void ClearVector(vector *obj);
 
 /* Função que retorna o valor do elemento de posição index do vector. */
-int Getvalue(vector *obj, int index);
+int GetValue(vector *obj, int index);
 
 /* Método que seta o valor de uma posição do vector. */
 void SetValue(vector *obj, int index, int value);

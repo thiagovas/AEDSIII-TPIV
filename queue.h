@@ -11,6 +11,7 @@
 #include <ctype.h>
 #include "pair.h"
 #include "vector.h"
+#include "utility.h"
 
 typedef struct itemqueue{
 	int_pair value;

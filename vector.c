@@ -4,18 +4,6 @@
 
 #include "vector.h"
 
-/* Função que aloca n posições de nBytes bytes e retorna um ponteiro de void. */
-void* alloc(int n, size_t nBytes)
-{
-    void *ptr = calloc(n, nBytes);
-    if(ptr == NULL)
-    {
-        printf("Error: Memoria insuficiente.\n");
-        exit(EXIT_FAILURE);
-    }
-    return ptr;
-}
-
 /* Método que inicializa a estrutura vector e já preenche as posições com o defaultValue. */
 void InitVector(vector *obj, int size, int defaultValue)
 {

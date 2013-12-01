@@ -10,6 +10,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "vector.h"
+#include "utility.h"
 
 typedef struct{
 	int value;
