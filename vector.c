@@ -98,8 +98,15 @@ void ClearVector(vector *obj)
 }
 
 /* Função que retorna o valor do elemento de posição index do vector. */
-int At(vector *obj, int index)
+int GetValue(vector *obj, int index)
 {	return obj->list[index].value; }
+
+/* Método que seta o valor de uma posição do vector. */
+void SetValue(vector *obj, int index, int value)
+{
+	if(index >= SizeVector(*obj)) return;
+	obj->list[index].value = value;
+}
 
 /* Método que edita o valor de um elemento do vector. */
 void EditItem(vector *obj, int index, int newValue)
