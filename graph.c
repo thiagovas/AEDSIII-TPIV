@@ -28,8 +28,8 @@ void AddEdge(graph *g, int FromNode, int ToNode, double cost)
  	
  	if(tempPtr == NULL)
  	{
- 		// TODO: Printar uma msg de erro.
  		free(g->nodes[FromNode].edges);
+ 		return;
  	}
  	g->nodes[FromNode].edges = tempPtr;
  	

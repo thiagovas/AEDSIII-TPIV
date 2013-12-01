@@ -4,8 +4,8 @@ CC=gcc
 
 all: build clearafter
 
-build: main.o vector.o graph.o queue.o pair.o matrix3d.o utility.o
-	$(CC) main.o vector.o graph.o queue.o pair.o utility.o matrix3d.o -o tp4 -lm -lpthread -O2
+build: main.o vector.o graph.o queue.o pair.o matrix3d.o utility.o solver.o
+	$(CC) main.o vector.o graph.o queue.o pair.o utility.o matrix3d.o solver.o -o tp4 -lm -lpthread -O2
 
 main.o: vector.o graph.o utility.o
 	$(CC) -c main.c -o main.o -Wall
@@ -27,6 +27,9 @@ matrix3d.o: vector.o utility.o
 
 utility.o:
 	$(CC) -c utility.c -o utility.o -Wall
+
+solver.o: utility.o vector.o graph.o matrix3d.o
+	$(CC) -c solver.c -o solver.o -Wall
 
 #Clear temporary files after compiling
 clearafter:

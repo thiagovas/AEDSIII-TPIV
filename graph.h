@@ -62,3 +62,4 @@ int ValueFromNode(graph *g, int node);
 void EditNodeValue(graph *g, int node, int newValue);
 
 #endif
+
