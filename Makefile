@@ -40,4 +40,5 @@ clearafter:
 
 clean: clearafter
 	rm -f tp4
+	rm -f output
 
