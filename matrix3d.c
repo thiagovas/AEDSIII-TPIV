@@ -100,6 +100,8 @@ void SetBeforePath(matrix3d *m, int x, int y, int z, path *value)
 void ChangeBeforePath(matrix3d *m, int x, int y, int z, int newX, int newY, int newZ)
 {
 	m->p[x][y][z].before = &m->p[newX][newY][newZ];
+	m->p[x][y][z].vertex = y;
+	m->p[newX][newY][newZ].vertex = newY;
 }
 
 /* Função que retorna o valor do vertice de uma posição de path. */
