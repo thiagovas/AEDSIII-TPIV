@@ -10,6 +10,7 @@
 #include <ctype.h>
 #include <math.h>
 #include <string.h>
+#include <pthread.h>
 #include "matrix3d.h"
 #include "graph.h"
 #include "vector.h"
