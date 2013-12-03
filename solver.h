@@ -16,12 +16,20 @@
 #include "vector.h"
 #include "utility.h"
 
-void solve(graph *g, vector *tPesos, vector *tQualidades, int d, int v, int wKnapsack);
+typedef struct td{
+	matrix3d *m;
+	graph *g;
+	vector *tPesos, *tQualidades;
+	int i, j, p, w;
+} thread_data;
+
+void solve(FILE *foutput, graph *g, vector *tPesos, vector *tQualidades, int d, int v, int wKnapsack);
 
 /* Método que roda o caso base da dp, ou seja, quando d=0 */
 void BaseCase(matrix3d *m, vector *tPesos, vector *tQualidades, int v, int w);
 
 void solveKnapsack(matrix3d *m, graph *g, vector *tPesos, vector *tQualidades, int i, int j, int k, int p);
 
+void* solveKnapsackThread(void *input);
 
 #endif

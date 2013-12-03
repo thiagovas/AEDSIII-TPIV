@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 			AddEdge(&g, v-1, u-1, peso);
 		}
 		
-		solve(&g, &tPesos, &tQualidades, d, SizeGraph(g), wMochila);
+		solve(foutput, &g, &tPesos, &tQualidades, d, SizeGraph(g), wMochila);
 		ClearGraph(&g);
 		ClearVector(&tPesos);
 		ClearVector(&tQualidades);
